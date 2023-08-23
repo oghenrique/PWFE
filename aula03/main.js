@@ -45,9 +45,9 @@ function calcularMedia() {
         // Usar md1 em vez de media
         alert("Sua média é " + md1 + ". Parabéns, você foi aprovado!");
     } else {
-        const ne = prompt(`Sua média é ${md1}. Insira sua nota de exame:`);
+        const mediaTotal = prompt(`Sua média é ${md1}. Insira sua nota de exame:`);
 
-        const md2 = (md1 + Number(ne)) / 2;
+        const md2 = (md1 + Number(mediaTotal)) / 2;
 
         if (md2 >= 5) {
             alert(`Sua nova média é ${md2}. Aprovado em exame.`);

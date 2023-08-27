@@ -138,21 +138,21 @@ function mostrarTriplo() {
     }
 }
 
-function mostrarPrimo() {
-    const numeros = document.getElementById('numeros').value.split(',')
-    const container = document.getElementById('container-primo')
+// function mostrarPrimo() {
+//     const numeros = document.getElementById('numeros').value.split(',')
+//     const container = document.getElementById('container-primo')
 
-    container.replaceChildren('')
-    const ultimoIndice = numeros.length
+//     container.replaceChildren('')
+//     const ultimoIndice = numeros.length
 
-    for (let contador = 0; contador < ultimoIndice; contador++) {
-        if (numeros[contador] % 1 == 0 && numeros[contador] % valor == 0) {
-            const novoSpan = document.createElement('span')
-            novoSpan.textContent = numeros[contador] + 1
-            container.appendChild(novoSpan)
-        }
-    }
-}
+//     for (let contador = 0; contador < ultimoIndice; contador++) {
+//         if (numeros[contador] % 1 == 0 && numeros[contador] % (numeros[contador]) == 0) {
+//             const novoSpan = document.createElement('span')
+//             novoSpan.textContent = numeros[contador] - 1
+//             container.appendChild(novoSpan)
+//         }
+//     }
+// }
 botaoMostrarNumeros.addEventListener('click', mostrarTodosNumeros)
 botaoNumerosPares.addEventListener('click', mostrarNumerosPares)
 botaoNumerosImpares.addEventListener('click', mostrarNumerosImpares)

@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.card {
+    width: 350px;
+    background-color: #fff;
+    
+    border-radius: 12px;
+    padding: 12px;
+    display: grid;
+    grid-template-columns: auto 1fr max-content;
+    gap: 12px;
+    align-items: center;
+    position: relative;
+}
+
+.card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.nome-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nome {
+    font-weight: 500;
+}
+
+.notificacoes {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background-color: #eb5e5e;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.tempo, .mensagem {
+    color: #b5b5b5;
+    font-size: 12px;
+}
+
+.contato {
+    position: absolute;
+    bottom: -15px;
+    left: 74px;
+    background-color: #eb5e5e;
+    padding: 4px 10px;
+    font-size: 14px;
+    border-radius: 12px;
+    color: white;
+}
+
+.card-container {
+    background-color: tomato;
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    border-radius: 16px;
+    padding: 24px 16px;
+}

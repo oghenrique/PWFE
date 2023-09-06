@@ -1,56 +1,88 @@
-// 'use strict'
+'use strict'
 
-// //JSON
-// const funcionarios = [
-//     {
-//         nome: 'Maria Souza',
-//         cargo: 'Designer',
-//         imagem: 'maria.jpg'
-//     },
-    
-//     {
-//         nome: 'João Silva',
-//         cargo: 'DBA',
-//         imagem: 'joao.jpg'
-//     },
+const contatos = [
+    {
+        nome: 'Ana Castela',
+        mensagem: 'Oi, tudo bem?',
+        quantidade: '1',
+        tempo: 'Há 12 minutos',
+        foto: 'ana.img',
+        contato: 'Gustavo Henrique'
+    },
+    {
+        nome: 'Neymar',
+        mensagem: 'Fut na sexta, leva 10 cont....',
+        quantidade: '11',
+        tempo: 'Há 4 dias',
+        foto: 'neymar.img',
+        contato: 'Gustavo Henrique'
+    },
+    {
+        nome: 'Roger Guedes',
+        mensagem: 'Vou voltar não KKKKKKK...',
+        quantidade: '1',
+        tempo: 'Há 1 minuto',
+        foto: 'roger.img',
+        contato: 'Gustavo Henrique'
+    },
+    {
+        nome: 'Nicolas Petri',
+        mensagem: 'Gu, a Gab tá te procu...',
+        quantidade: '18',
+        tempo: 'Há 25 minutos',
+        foto: 'nicolas.png',
+        contato: 'Gustavo Henrique'
+    }
+]
 
-//     {
-//         nome: 'Hugo Pereira',
-//         cargo: 'FrontEnd',
-//         imagem: 'hugo.jpg'
-//     },
-    
-//     {
-//         nome: 'Ana Maria',
-//         cargo: 'BackEnd',
-//         imagem: 'ana.jpg'
-//     }
+function mostrarCards(contatos){
 
-// ]
+    const container = document.getElementById('container')
+    const card = document.createElement('div')
+    card.classList.add('card')
 
-// function mostrarCards(funcionario) {
-//     const cardContainer = document.getElementById('card-container')
+    const img = document.createElement('img')
+    img.src = `./img${contatos.foto}`
+    img.alt = contatos.nome
 
-//     const card = document.createElement('div')
-//     card.classList.add('card')
+    const informacoes = document.createElement('div')
+    informacoes.classList.add('informacoes')
 
-//     const imagem = document.createElement('img')
-//     imagem.src = `./img/${funcionario.imagem}`
-//     imagem.alt = funcionario.nome
+    const nomeContato = document.createElement('div')
+    nomeContato.classList.add('nomeContato')
 
-//     const cardDescription = document.createElement('div')
-//     cardDescription.classList.add('card-description')
+    const nomeCtt = document.createElement('h3')
+    nomeCtt.classList.add('nomeCtt')
+    nomeCtt.textContent = contatos.nome
 
-//     const nome = document.createElement('h2')
-//     nome.textContent = funcionario.nome
+    const qtdMensagem = document.createElement('p')
+    qtdMensagem.classList.add('qtdMensagem')
+    qtdMensagem.textContent = contatos.quantidade
 
-//     const cargo = document.createElement('p')
-//     cargo.textContent = funcionario.cargo
+    const mensagem = document.createElement('p')
+    mensagem.classList.add('mensagem')
+    mensagem.textContent = contatos.mensagem
 
-//     cardDescription.replaceChildren(nome, cargo)
-//     card.replaceChildren(imagem, cardDescription)
-//     cardContainer.appendChild(card)
-// }
+    nomeContato.replaceChildren(nomeCtt, qtdMensagem)
 
-// funcionarios.forEach(mostrarCards)
+    informacoes.replaceChildren(nomeContato, mensagem)
 
+    const tempo = document.createElement('p')
+    tempo.classList.add('tempo')
+    tempo.textContent = contatos.tempo
+
+    const contato = document.createElement('div')
+    contato.classList.add('contato')
+
+    const contato2 = document.createElement('p')
+    contato2.textContent = contatos.contato
+
+    contato.replaceChildren(contato2)
+
+    card.replaceChildren(img, informacoes, tempo, contato)
+
+    container.appendChild(card)
+
+}
+
+contatos.forEach(mostrarCards)

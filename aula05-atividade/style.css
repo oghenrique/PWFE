@@ -14,6 +14,10 @@ body {
     text-align: center;
 }
 
+h1{
+    color: white;
+}
+
 .card {
     width: 350px;
     background-color: #fff;
@@ -33,21 +37,21 @@ body {
     border-radius: 50%;
 }
 
-.nome-container {
+.nomeCtt{
+    font-weight: 500;
+}
+
+.nomeContato{
     display: flex;
     align-items: center;
     gap: 8px;
-}
-
-.nome {
-    font-weight: 500;
 }
 
 .notificacoes {
     width: 1.2rem;
     height: 1.2rem;
     border-radius: 50%;
-    background-color: #eb5e5e;
+    background-color: #006494;
     color: white;
     display: flex;
     align-items: center;
@@ -64,13 +68,14 @@ body {
 .tempo, .mensagem {
     color: #b5b5b5;
     font-size: 12px;
+    place-self: start;
 }
 
 .contato {
     position: absolute;
     bottom: -15px;
     left: 74px;
-    background-color: #eb5e5e;
+    background-color: #006494;
     padding: 4px 10px;
     font-size: 14px;
     border-radius: 12px;
@@ -78,7 +83,7 @@ body {
 }
 
 .card-container {
-    background-color: tomato;
+    background-color: #13293d;
     display: flex;
     gap: 16px;
     flex-direction: column;
